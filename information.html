@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="information.css" type="text/css">
+ <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Sellers information</title>
+    </head>
+  <body>
+<h3>Hi, &nbsp<scope id="">guest</scope> <!-- can change the text to the name of the user obtained from the token --> </h3>
+<table>  <!-- data for the seller -->
+  <tr> <!-- First column contains the headings for each row -->
+    <th scope="col">S.No</th><th scope="col">Item</th><th scope="col">Category</th><th scope="col">Selling Price</th><th scope="col">Number of Items sold</th>
+  </tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">1.</button></td> <!-- buttons added to the first element of each row to select all the items of the same category -->
+  <td>The man who would be King</td><td>Books</td><td>250</td><td>100</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">2.</button></td><td>Go set a watchmen</td><td>Books</td><td>220</td><td>12</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">3.</button></td><td>Licence to kill</td><td>DVD</td><td>500</td><td>22</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">4.</button></td><td>Citizen Kane</td><td>DVD</td><td>280</td><td>23</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">5.</button></td><td>Some like it hot</td><td>DVD</td><td>400</td><td>500</td>
+</tr>
+<tr class = "devices">
+  <td><button onclick="click1('devices')">6.</button></td><td>iPhone 6</td><td>Devices</td><td>37000</td><td>1909</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">7.</button></td><td>The Apartment</td><td>DVD</td><td>360</td><td>123</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">8.</button></td><td>And then there were none</td><td>Books</td><td>670</td><td>290</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">9.</button></td><td>Nocternal Animals</td><td>DVD</td><td>567</td><td>332</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">10.</button></td><td>Palace of Illusions</td><td>Books</td><td>344</td><td>3</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">11.</button></td><td>Star Wars</td><td>DVD</td><td>200</td><td>1234</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">12.</button></td><td>Rosemarry's Baby</td><td>DVD</td><td>434</td><td>2909</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">13.</button></td><td>On Thorns</td><td>Books</td><td>232</td><td>567</td>
+</tr>
+<tr class = "devices">
+  <td><button onclick="click1('devices')">14.</button></td> <td>Apple Watch</td><td>Devices</td><td>15000</td><td>2326</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">15.</button></td><td>Tintin Comics: The Complete Series</td><td>Books</td><td>9000</td><td>7009</td>
+</tr>
+<tr class = "dvd">
+  <td><button onclick="click1('dvd')">16.</button></td> <td>Birdman:or the Unexpected virtue of ignorance</td><td>DVD</td><td>435</td><td>34</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">17.</button></td><td>Inferno</td><td>Books</td><td>2332</td><td>4567</td>
+</tr>
+<tr class = "devices">
+  <td><button onclick="click1('devices')">18.</button></td><td>Samsung Galaxy S7</td><td>Devices</td><td>29000</td><td>6752</td>
+</tr>
+<tr class = "devices" id ="test123">
+  <td><button onclick="click1('devices')">19.</button></td><td>Samsung Galaxy S8</td><td>Devices</td><td>35000</td><td>8090</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">20.</button></td><td>Tinker Tailor Soldier Spy</td><td>Books</td><td>290</td><td>67</td>
+</tr>
+<tr class = "books">
+  <td><button onclick="click1('books')">21.</button></td><td>The Ilied</td><td>Books</td><td>120</td><td>9000</td>
+</tr>
+</table>
+<script type="text/javascript">
+function click1(str){ // function takes the value of the type of item to be selected
+var books = document.querySelectorAll(".books"); // selecting all the required objects
+var booksCount = document.querySelectorAll(".books").length; //total number of elements with class = "books"
+var devices = document.querySelectorAll(".devices");
+var devicesCount = document.querySelectorAll(".devices").length; //total number of elements with class = "devices"
+var dvd = document.querySelectorAll(".dvd");
+var dvdCount = document.querySelectorAll(".dvd").length;//total number of elements with class = "dvd"
+  if(str === "dvd"){  // depending on the value passesd the background colors of the cells are changed
+    for(var i = 0; i < dvdCount; i++){
+    dvd[i].style.backgroundColor = "#99abff";
+    }
+    for(var i = 0; i < booksCount; i++){
+    books[i].style.backgroundColor = "white";
+    }
+    for(var i = 0; i < devicesCount; i++){
+    devices[i].style.backgroundColor = "white";
+    }
+  }
+  else if(str === "books"){
+    for(var i = 0; i < dvdCount; i++){
+    dvd[i].style.backgroundColor = "white";
+    }
+    for(var i = 0; i < booksCount; i++){
+    books[i].style.backgroundColor = "#ff9999";
+    }
+    for(var i = 0; i < devicesCount; i++){
+    devices[i].style.backgroundColor = "white";
+    }
+  }
+  else if(str === "devices"){
+    for(var i = 0; i < dvdCount; i++){
+    dvd[i].style.backgroundColor = "white";
+    }
+    for(var i = 0; i < booksCount; i++){
+    books[i].style.backgroundColor = "white";
+    }
+    for(var i = 0; i < devicesCount; i++){
+    devices[i].style.backgroundColor = "#fbff99";
+    }
+  }
+
+}
+</script>
+  </body>
+</html>

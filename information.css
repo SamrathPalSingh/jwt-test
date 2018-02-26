@@ -1,0 +1,23 @@
+table{
+//display: block;
+margin-left: auto;
+margin-right:auto;
+padding: 0.5%;
+}
+
+th{
+  background-color:#4cf776 ;
+
+}
+
+h3{
+  background:#4cf776;
+  border: 5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 10px 10px 10px grey;
+ position: sticky;
+ top: 0;
+ left: auto
+ z-index: 10;
+}

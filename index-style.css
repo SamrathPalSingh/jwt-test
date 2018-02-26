@@ -1,0 +1,27 @@
+
+table{
+  display: block;
+ padding:2%;
+border: 5px solid #80f442;
+border-radius: 9px;
+margin: auto  auto;
+background: linear-gradient(to bottom, white, #c2c4c2);
+
+}
+
+h1{
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  object-position: center;
+}
+footer{
+  text-align: center;
+  position:relative;
+  top: 100px;
+  font-size:10px;
+  color: #666b66;  
+}
+
+[type="password"], [type="text"]{
+ width: 125px; 
+}
